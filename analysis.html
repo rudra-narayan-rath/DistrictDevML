@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Analysis Results · ML-Based District Development Prioritization System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Machine learning analysis results and budget-aware development recommendations for Indian districts."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="analysis.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">ML</div>
+          <div class="brand-text">
+            <span>Analysis</span>
+            <span>District Prioritization System</span>
+          </div>
+        </div>
+        <nav class="header-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+<a href="analysis.html">Analyze District</a>
+<a href="dataset.html">Dataset</a>
+<a href="how-it-works.html">How It Works</a>
+
+        </nav>
+      </div>
+    </header>
+
+    <main class="main" id="top">
+      <!-- Header Section -->
+      <section class="section hero-section">
+        <div class="container">
+          <header class="page-header">
+            <h1 class="page-title">📊 District Development Analysis Results</h1>
+            <p class="page-subtitle">
+              Machine-learning-driven prioritization with budget-aware recommendations
+            </p>
+          </header>
+        </div>
+      </section>
+
+      <!-- Priority Ranking Section -->
+      <section class="section" aria-labelledby="priority-title">
+        <div class="container">
+          <header class="section-header">
+            <h2 id="priority-title" class="section-title">Priority Ranking (ML Output)</h2>
+            <p class="section-subtitle">
+              Machine learning analysis of development indicators, sorted by priority score (highest first)
+            </p>
+          </header>
+
+          <!-- District Selector -->
+          <div class="district-selector">
+            <label for="district-select" class="selector-label">
+              Select District
+            </label>
+            <div class="selector-wrapper">
+              <select id="district-select" class="selector-input">
+                <option value="">Loading districts...</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Priority List -->
+          <div id="priority-list-container" class="priority-list-container">
+            <div class="loading-state">
+              <div class="loading-spinner"></div>
+              Loading ML priority rankings...
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Budget Input Section -->
+      <section class="section section-budget" aria-labelledby="budget-title">
+        <div class="container">
+          <header class="section-header">
+            <h2 id="budget-title" class="section-title">Budget Constraints</h2>
+            <p class="section-subtitle">
+              Apply real-world financial limits to generate feasible recommendations
+            </p>
+          </header>
+
+          <div class="budget-input-card">
+            <div class="budget-input-group">
+              <label for="budget-input" class="input-label">
+                Available Budget (₹ Crores)
+              </label>
+              <div class="input-wrapper">
+                <input
+                  type="number"
+                  id="budget-input"
+                  class="budget-input"
+                  min="0"
+                  step="0.1"
+                  placeholder="100"
+                  value=""
+                />
+                <span class="input-unit">Cr</span>
+              </div>
+              <p class="input-helper">
+                Enter total development budget for this district
+              </p>
+            </div>
+
+            <button id="generate-btn" class="btn btn-primary generate-btn" disabled>
+              Generate Recommendations
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final Recommendations Section -->
+      <section class="section" aria-labelledby="recommendations-title">
+        <div class="container">
+          <header class="section-header">
+            <h2 id="recommendations-title" class="section-title">
+              Final Recommendations
+            </h2>
+            <p class="section-subtitle">
+              Budget-optimized development plan maximizing total priority score
+            </p>
+          </header>
+
+          <div id="recommendations-container" class="recommendations-container">
+            <div class="empty-state">
+              <div class="empty-icon">🎯</div>
+              <h3>Enter budget to generate recommendations</h3>
+              <p>Provide a budget amount above ₹0 to see optimized interventions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-main">
+          <div class="footer-title">
+            ML-Based District Development Prioritization System
+          </div>
+          <p class="footer-text">
+            Data-driven decision intelligence for district planning.
+          </p>
+        </div>
+        <div class="footer-meta">
+          <div class="footer-stack">
+            <span class="footer-label">Technologies:</span>
+            <span class="footer-chip">Python</span>
+            <span class="footer-chip">Random Forest</span>
+            <span class="footer-chip">Budget Optimization</span>
+            <span class="footer-chip">Decision Intelligence</span>
+          </div>
+          <div class="footer-note">
+            Academic prototype for research and demonstration.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="analysis.js"></script>
+</body>
+</html>

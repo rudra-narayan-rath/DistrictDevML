@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How It Works · ML-Based District Development Prioritization System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Detailed overview of how the ML-based district development prioritization system processes data, applies machine learning, and generates budget-aware recommendations."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="how-it-works.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header / Navbar -->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="index.html#top" class="brand">
+          <div class="brand-mark" aria-hidden="true">ML</div>
+          <div class="brand-text">
+            <span>Gov Prototype</span>
+            <span>District Prioritization System</span>
+          </div>
+        </a>
+
+        <nav class="header-nav" aria-label="Primary navigation">
+          <a href="index.html#top">Home</a>
+          <a href="analysis.html">Analyze District</a>
+          <a href="dataset.html">Dataset</a>
+          <a href="how-it-works.html" class="nav-active">How It Works</a>
+        </nav>
+
+        <a href="analysis.html" class="btn btn-primary header-cta">
+          Analyze District
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-left">
+            <h1 id="hero-title" class="hero-title">
+              How the Prioritization System Works
+            </h1>
+            <p class="hero-subtitle">
+              From raw district indicators to ranked priorities and budget-feasible recommendations, this page explains each stage of the pipeline.
+            </p>
+            <div class="hero-actions">
+              <a href="#pipeline" class="btn btn-primary js-scroll-link">
+                View Pipeline
+              </a>
+              <a href="analysis.html" class="btn btn-outline">
+                Try the Analysis
+              </a>
+            </div>
+            <p class="hero-note">
+              Built as an academic prototype to demonstrate transparent, data-driven district planning.
+            </p>
+          </div>
+
+          <aside class="hero-right" aria-label="Illustration of process stages">
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <span class="hero-card-title">Processing stages</span>
+                <span class="hero-pill">End-to-end</span>
+              </div>
+              <ol class="hero-steps">
+                <li><span>1.</span> Collect district indicators</li>
+                <li><span>2.</span> Run ML model for priority scores</li>
+                <li><span>3.</span> Apply budget optimization</li>
+                <li><span>4.</span> Generate recommended actions</li>
+              </ol>
+              <div class="hero-card-footer">
+                <span class="legend-dot legend-blue"></span>
+                <span class="legend-text">Each stage is fully explainable</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Pipeline overview -->
+      <section id="pipeline" class="section" aria-labelledby="pipeline-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-kicker">Overview</p>
+            <h2 id="pipeline-title" class="section-title">
+              End-to-end decision pipeline
+            </h2>
+            <p class="section-subtitle">
+              The system follows a four-stage pipeline from data ingestion to actionable recommendations.
+            </p>
+          </header>
+
+          <div class="pipeline-flow" aria-label="High-level pipeline">
+            <div class="pipeline-step">
+              <div class="pipeline-node">1</div>
+              <div class="pipeline-label">Data Collection</div>
+              <p class="pipeline-text">
+                District-level indicators related to water, healthcare, roads, and education are aggregated into a structured dataset.
+              </p>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">→</div>
+
+            <div class="pipeline-step">
+              <div class="pipeline-node">2</div>
+              <div class="pipeline-label">ML Priority Scoring</div>
+              <p class="pipeline-text">
+                A trained Random Forest model estimates priority scores for each sector and indicator based on development gaps.
+              </p>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">→</div>
+
+            <div class="pipeline-step">
+              <div class="pipeline-node">3</div>
+              <div class="pipeline-label">Budget Optimization</div>
+              <p class="pipeline-text">
+                A simple optimization routine selects high-priority interventions that fit within the specified budget.
+              </p>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">→</div>
+
+            <div class="pipeline-step">
+              <div class="pipeline-node">4</div>
+              <div class="pipeline-label">Recommendations</div>
+              <p class="pipeline-text">
+                The system outputs a prioritized list of interventions, along with budget usage and remaining funds.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data and model details -->
+      <section id="data-and-model" class="section section-alt" aria-labelledby="data-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-kicker">Data & model</p>
+            <h2 id="data-title" class="section-title">What the system analyzes</h2>
+            <p class="section-subtitle">
+              The prototype uses a curated dataset and a Random Forest model to estimate development priorities.
+            </p>
+          </header>
+
+          <div class="two-column">
+            <div class="card">
+              <h3 class="card-title">District indicators</h3>
+              <ul class="card-list">
+                <li>Water supply coverage and service quality metrics.</li>
+                <li>Healthcare facility density and accessibility indicators.</li>
+                <li>Road connectivity and infrastructure quality metrics.</li>
+                <li>Education outcomes and infrastructure availability.</li>
+              </ul>
+              <p class="card-footnote">
+                Indicators are normalized and combined into a structured input for the ML model.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Machine learning model</h3>
+              <ul class="card-list">
+                <li>Random Forest model trained on historical development patterns.</li>
+                <li>Outputs a priority score for each sector per district.</li>
+                <li>Higher scores correspond to more severe development gaps.</li>
+                <li>Scores are exported into a ranked CSV for the web interface.</li>
+              </ul>
+              <p class="card-footnote">
+                The prototype focuses on interpretability and uses feature importance to aid explanation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Budget optimization explanation -->
+      <section id="budget-optimization" class="section" aria-labelledby="budget-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-kicker">Budget logic</p>
+            <h2 id="budget-title" class="section-title">How budget-aware selection works</h2>
+            <p class="section-subtitle">
+              The web interface applies a simple optimization routine to select feasible interventions within a fixed budget.
+            </p>
+          </header>
+
+          <div class="budget-layout">
+            <div class="budget-text">
+              <h3 class="budget-heading">Greedy selection by priority</h3>
+              <p>
+                Interventions are first sorted by their ML priority score for the selected district, highest first.
+              </p>
+              <p>
+                The system then walks down this ranked list and adds each intervention if its cost still fits inside the remaining budget, stopping when no further items can be added.
+              </p>
+              <ul class="budget-list">
+                <li>Input: district-level ranked interventions + user-defined budget.</li>
+                <li>Cost: estimated per sector using prototype cost assumptions.</li>
+                <li>Output: selected interventions, total used budget, and remaining budget.</li>
+              </ul>
+            </div>
+
+            <aside class="budget-aside" aria-label="Example of budget usage">
+              <div class="mini-panel">
+                <div class="mini-panel-header">
+                  <span class="mini-title">Example selection</span>
+                  <span class="mini-pill">Prototype</span>
+                </div>
+                <ul class="mini-list">
+                  <li>✔ Healthcare — ₹40 Cr</li>
+                  <li>✔ Water Supply — ₹30 Cr</li>
+                  <li>✔ Education — ₹50 Cr</li>
+                </ul>
+                <div class="mini-summary">
+                  <p><strong>Total budget:</strong> ₹130 Cr</p>
+                  <p><strong>Used:</strong> ₹120 Cr</p>
+                  <p><strong>Remaining:</strong> ₹10 Cr</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transparency & limitations -->
+      <section id="transparency" class="section section-alt" aria-labelledby="transparency-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-kicker">Transparency</p>
+            <h2 id="transparency-title" class="section-title">Interpretation and limitations</h2>
+            <p class="section-subtitle">
+              The prototype is designed for exploration and learning, not as an official planning tool.
+            </p>
+          </header>
+
+          <div class="two-column">
+            <div class="card">
+              <h3 class="card-title">What the tool shows</h3>
+              <ul class="card-list">
+                <li>Relative priority ranking across major sectors for each district.</li>
+                <li>Illustrative cost assumptions per sector and district.</li>
+                <li>Feasible combinations of actions under a user-entered budget.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">What it is not</h3>
+              <ul class="card-list">
+                <li>Not a replacement for field surveys or expert judgement.</li>
+                <li>Not an official policy or fund allocation tool.</li>
+                <li>Not a live system; it uses a static, academic dataset.</li>
+              </ul>
+              <p class="card-footnote">
+                Outputs should be interpreted as decision-support signals rather than definitive recommendations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="section final-cta" aria-labelledby="final-cta-title">
+        <div class="container final-cta-inner">
+          <h2 id="final-cta-title" class="final-cta-title">
+            Explore priorities for a specific district
+          </h2>
+          <p class="final-cta-text">
+            Open the analysis page, select a district, and experiment with different budget levels to see how recommendations change.
+          </p>
+          <a href="analysis.html" class="btn btn-primary js-start-analysis">
+            Start Analysis
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-main">
+          <div class="footer-title">
+            ML-Based District Development Prioritization System
+          </div>
+          <p class="footer-text">
+            Developed as an academic prototype for evaluating data-driven approaches to district development planning. Not an official government decision-making tool.
+          </p>
+        </div>
+        <div class="footer-meta">
+          <div class="footer-stack">
+            <span class="footer-label">Technologies:</span>
+            <span class="footer-chip">Python</span>
+            <span class="footer-chip">Machine Learning</span>
+            <span class="footer-chip">Random Forest</span>
+            <span class="footer-chip">Data Analytics</span>
+          </div>
+          <div class="footer-note">
+            © Academic / research use only.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="how-it-works.js"></script>
+</body>
+</html>

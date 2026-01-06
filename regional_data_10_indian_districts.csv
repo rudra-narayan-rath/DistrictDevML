@@ -1,0 +1,41 @@
+region,sector,indicator,value
+District_Alwar_Rajasthan,Water Supply,Households with tap water (%),45.0
+District_Alwar_Rajasthan,Healthcare,Doctors per 1000 population,0.7
+District_Alwar_Rajasthan,Road Infrastructure,Road density (km per 100 sq km),28.0
+District_Alwar_Rajasthan,Education,Literacy rate (%),61.0
+District_Gaya_Bihar,Water Supply,Households with tap water (%),38.0
+District_Gaya_Bihar,Healthcare,Doctors per 1000 population,0.6
+District_Gaya_Bihar,Road Infrastructure,Road density (km per 100 sq km),25.0
+District_Gaya_Bihar,Education,Literacy rate (%),59.0
+District_Koraput_Odisha,Water Supply,Households with tap water (%),35.0
+District_Koraput_Odisha,Healthcare,Doctors per 1000 population,0.5
+District_Koraput_Odisha,Road Infrastructure,Road density (km per 100 sq km),22.0
+District_Koraput_Odisha,Education,Literacy rate (%),53.0
+District_Nandurbar_Maharashtra,Water Supply,Households with tap water (%),42.0
+District_Nandurbar_Maharashtra,Healthcare,Doctors per 1000 population,0.9
+District_Nandurbar_Maharashtra,Road Infrastructure,Road density (km per 100 sq km),35.0
+District_Nandurbar_Maharashtra,Education,Literacy rate (%),64.0
+District_Bastar_Chhattisgarh,Water Supply,Households with tap water (%),33.0
+District_Bastar_Chhattisgarh,Healthcare,Doctors per 1000 population,0.4
+District_Bastar_Chhattisgarh,Road Infrastructure,Road density (km per 100 sq km),20.0
+District_Bastar_Chhattisgarh,Education,Literacy rate (%),51.0
+District_Barmer_Rajasthan,Water Supply,Households with tap water (%),40.0
+District_Barmer_Rajasthan,Healthcare,Doctors per 1000 population,0.6
+District_Barmer_Rajasthan,Road Infrastructure,Road density (km per 100 sq km),27.0
+District_Barmer_Rajasthan,Education,Literacy rate (%),56.0
+District_Kalahandi_Odisha,Water Supply,Households with tap water (%),37.0
+District_Kalahandi_Odisha,Healthcare,Doctors per 1000 population,0.5
+District_Kalahandi_Odisha,Road Infrastructure,Road density (km per 100 sq km),24.0
+District_Kalahandi_Odisha,Education,Literacy rate (%),54.0
+District_Palamu_Jharkhand,Water Supply,Households with tap water (%),36.0
+District_Palamu_Jharkhand,Healthcare,Doctors per 1000 population,0.6
+District_Palamu_Jharkhand,Road Infrastructure,Road density (km per 100 sq km),26.0
+District_Palamu_Jharkhand,Education,Literacy rate (%),58.0
+District_Raichur_Karnataka,Water Supply,Households with tap water (%),50.0
+District_Raichur_Karnataka,Healthcare,Doctors per 1000 population,1.0
+District_Raichur_Karnataka,Road Infrastructure,Road density (km per 100 sq km),40.0
+District_Raichur_Karnataka,Education,Literacy rate (%),67.0
+District_Dholpur_Rajasthan,Water Supply,Households with tap water (%),43.0
+District_Dholpur_Rajasthan,Healthcare,Doctors per 1000 population,0.7
+District_Dholpur_Rajasthan,Road Infrastructure,Road density (km per 100 sq km),32.0
+District_Dholpur_Rajasthan,Education,Literacy rate (%),63.0

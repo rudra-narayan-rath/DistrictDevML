@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ML-Based District Development Prioritization System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="A data-driven decision support system that uses machine learning and budget optimization to identify and prioritize critical development needs across Indian districts."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header / Navbar -->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#top" class="brand">
+          <div class="brand-mark" aria-hidden="true">ML</div>
+          <div class="brand-text">
+            <span>Gov Prototype</span>
+            <span>District Prioritization System</span>
+          </div>
+        </a>
+
+        <nav class="header-nav" aria-label="Primary navigation">
+          <a href="#top">Home</a>
+          <a href="analysis.html">Analyze District</a>
+          <a href="dataset.html">Dataset</a>
+          <a href="how-it-works.html">How It Works</a>
+        </nav>
+
+        <a href="analysis.html" class="btn btn-primary header-cta">
+          Analyze District
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-left">
+            <h1 id="hero-title" class="hero-title">
+              ML-Based District Development Prioritization System
+            </h1>
+            <p class="hero-subtitle">
+              A data-driven decision support system that uses machine learning and budget optimization to identify and prioritize critical development needs across Indian districts.
+            </p>
+            <div class="hero-actions">
+              <a href="analysis.html" class="btn btn-primary">
+                Analyze District
+              </a>
+              <a href="dataset.html" class="btn btn-outline">
+                View Dataset
+              </a>
+            </div>
+            <p class="hero-note">
+              Built for <strong>government planners</strong>, researchers, and academic evaluation of district-level development priorities.
+            </p>
+          </div>
+
+          <aside class="hero-right" aria-label="Visual representation of data-driven planning">
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <span class="hero-card-title">District overview sample</span>
+                <span class="hero-pill">Data-driven</span>
+              </div>
+              <div class="hero-card-body">
+                <div class="mini-metric">
+                  <span class="mini-label">Top priority sector</span>
+                  <span class="mini-value">Healthcare</span>
+                </div>
+                <div class="mini-metric">
+                  <span class="mini-label">Budget used</span>
+                  <span class="mini-value">₹18.4 Cr / ₹20 Cr</span>
+                </div>
+                <div class="mini-metric">
+                  <span class="mini-label">Recommended actions</span>
+                  <span class="mini-value">9</span>
+                </div>
+                <div class="hero-bars" aria-hidden="true">
+                  <div class="bar">
+                    <span class="bar-label">Water</span>
+                    <div class="bar-track">
+                      <div class="bar-fill bar-water"></div>
+                    </div>
+                    <span class="bar-score">0.76</span>
+                  </div>
+                  <div class="bar">
+                    <span class="bar-label">Healthcare</span>
+                    <div class="bar-track">
+                      <div class="bar-fill bar-health"></div>
+                    </div>
+                    <span class="bar-score">0.89</span>
+                  </div>
+                  <div class="bar">
+                    <span class="bar-label">Roads</span>
+                    <div class="bar-track">
+                      <div class="bar-fill bar-road"></div>
+                    </div>
+                    <span class="bar-score">0.68</span>
+                  </div>
+                  <div class="bar">
+                    <span class="bar-label">Education</span>
+                    <div class="bar-track">
+                      <div class="bar-fill bar-edu"></div>
+                    </div>
+                    <span class="bar-score">0.81</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-card-footer">
+                <span class="legend-dot legend-blue"></span>
+                <span class="legend-text">Priority score (0–1)</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Key Features -->
+      <section class="section" aria-labelledby="features-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-kicker">Key capabilities</p>
+            <h2 id="features-title" class="section-title">Designed for data-driven planning</h2>
+          </header>
+
+          <div class="features-grid">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">📊</div>
+              <h3 class="feature-title">Data-Driven Insights</h3>
+              <p class="feature-text">
+                Uses real district-level indicators such as water supply, healthcare availability, road infrastructure, and education levels to understand current development gaps.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🤖</div>
+              <h3 class="feature-title">Machine Learning Prioritization</h3>
+              <p class="feature-text">
+                Applies a Random Forest–based model to identify the most underdeveloped sectors in each district and assign priority scores for action.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">💰</div>
+              <h3 class="feature-title">Budget-Aware Planning</h3>
+              <p class="feature-text">
+                Recommends development actions that fit within limited budget constraints using optimization logic aligned with planning needs.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🔍</div>
+              <h3 class="feature-title">Transparent &amp; Explainable Results</h3>
+              <p class="feature-text">
+                Provides clear rankings, scores, and visual summaries so planners and reviewers can understand and discuss each recommendation.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How the System Works -->
+      <section id="how-it-works" class="section section-alt" aria-labelledby="how-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-kicker">How it works</p>
+            <h2 id="how-title" class="section-title">From raw data to actionable priorities</h2>
+          </header>
+
+          <div class="flow-wrapper">
+            <div class="flow-steps" aria-label="Processing stages of the system">
+              <div class="flow-step">
+                <div class="flow-node">1</div>
+                <div class="flow-label">District Data</div>
+              </div>
+              <div class="flow-arrow" aria-hidden="true">→</div>
+
+              <div class="flow-step">
+                <div class="flow-node">2</div>
+                <div class="flow-label">ML Priority Analysis</div>
+              </div>
+              <div class="flow-arrow" aria-hidden="true">→</div>
+
+              <div class="flow-step">
+                <div class="flow-node">3</div>
+                <div class="flow-label">Budget Optimization</div>
+              </div>
+              <div class="flow-arrow" aria-hidden="true">→</div>
+
+              <div class="flow-step">
+                <div class="flow-node">4</div>
+                <div class="flow-label">Actionable Recommendations</div>
+              </div>
+            </div>
+
+            <p class="flow-text">
+              The system evaluates district development indicators, learns priority levels using machine learning, and selects feasible interventions within the available budget.
+            </p>
+
+            <a href="#how-it-works-detail" class="link-button">
+              Learn More (How It Works)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Analyze & Dataset CTA strip -->
+      <section id="analyze" class="section section-strip" aria-labelledby="analyze-title">
+        <div class="container strip-inner">
+          <div>
+            <h2 id="analyze-title" class="strip-title">
+              Analyze district development priorities
+            </h2>
+            <p class="strip-text">
+              Select a district, configure budget limits, and generate prioritized development actions.
+            </p>
+          </div>
+          <div class="strip-actions">
+            <a href="analysis.html" class="btn btn-primary js-start-analysis">
+              Start Analysis
+            </a>
+            <a id="dataset" href="dataset.html" class="btn btn-outline">
+              View Dataset
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Call to Action -->
+      <section class="section final-cta" aria-labelledby="final-cta-title">
+        <div class="container final-cta-inner">
+          <h2 id="final-cta-title" class="final-cta-title">
+            Ready to analyze district development needs?
+          </h2>
+          <p class="final-cta-text">
+            Explore district-wise development priorities and make informed, budget-conscious planning decisions.
+          </p>
+          <a href="analysis.html" class="btn btn-primary js-start-analysis">
+            Start Analysis
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-main">
+          <div class="footer-title">
+            ML-Based District Development Prioritization System
+          </div>
+          <p class="footer-text">
+            Developed as an academic prototype for evaluating data-driven approaches to district development planning. Not an official government decision-making tool.
+          </p>
+        </div>
+        <div class="footer-meta">
+          <div class="footer-stack">
+            <span class="footer-label">Technologies:</span>
+            <span class="footer-chip">Python</span>
+            <span class="footer-chip">Machine Learning</span>
+            <span class="footer-chip">Random Forest</span>
+            <span class="footer-chip">Data Analytics</span>
+          </div>
+          <div class="footer-note">
+            © Academic / research use only.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

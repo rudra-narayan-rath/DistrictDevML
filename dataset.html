@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dataset Overview · ML-Based District Development Prioritization System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Dataset overview for the ML-Based District Development Prioritization System, showing district-wise and sector-wise development indicators."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="dataset.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">ML</div>
+          <div class="brand-text">
+            <span>Dataset</span>
+            <span>District Prioritization System</span>
+          </div>
+        </div>
+        <nav class="header-nav" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="analysis.html">Analyze District</a>
+          <a href="dataset.html" aria-current="page">Dataset</a>
+          <a href="how-it-works.html">How It Works</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main" id="top">
+      <!-- Page Header -->
+      <section class="section">
+        <div class="container">
+          <header class="page-header">
+            <h1 class="page-title">📊 Dataset Overview</h1>
+            <p class="page-subtitle">
+              Input development indicators used for machine learning-based district analysis.
+            </p>
+          </header>
+        </div>
+      </section>
+
+      <!-- Dataset Description Card -->
+      <section class="section">
+        <div class="container">
+          <div class="description-card" aria-labelledby="dataset-description-title">
+            <h2 id="dataset-description-title" class="card-title">Dataset Description</h2>
+            <p class="card-text">
+              This dataset contains development indicators for 10 Indian districts across four sectors:
+              Water Supply, Healthcare, Road Infrastructure, and Education.
+            </p>
+            <p class="card-text">
+              Each record includes a region name, sector, indicator description, and a numerical value.
+            </p>
+            <p class="card-text">
+              The machine learning model relies entirely on this dataset to compute priority scores.
+            </p>
+          </div>
+
+          <!-- Data Source -->
+          <div class="source-row">
+            <div>
+              <div class="source-label">Data Source</div>
+              <div class="source-path">
+                Loaded directly from <code>/public/data/regional_data_10_indian_districts.csv</code>
+              </div>
+            </div>
+            <a
+              class="btn btn-outline"
+              href="regional_data_10_indian_districts.csv"
+              download
+            >
+              Download CSV
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Summary Statistics -->
+      <section class="section">
+        <div class="container">
+          <div class="stats-grid" aria-label="Summary statistics">
+            <div class="stat-card">
+              <div class="stat-label">Number of Districts</div>
+              <div class="stat-value" id="stat-districts">—</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Total Records</div>
+              <div class="stat-value" id="stat-records">—</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Number of Sectors</div>
+              <div class="stat-value" id="stat-sectors">—</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Indicators per District</div>
+              <div class="stat-value" id="stat-indicators-per-district">—</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filters + Table -->
+      <section class="section">
+        <div class="container">
+          <!-- Filter Controls -->
+          <div class="filter-bar" aria-label="Dataset filters">
+            <div class="filter-group">
+              <label for="filter-district" class="filter-label">Filter by District</label>
+              <select id="filter-district" class="filter-select">
+                <option value="">All districts</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="filter-sector" class="filter-label">Filter by Sector</label>
+              <select id="filter-sector" class="filter-select">
+                <option value="">All sectors</option>
+                <option value="Water Supply">Water Supply</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Road Infrastructure">Road Infrastructure</option>
+                <option value="Education">Education</option>
+              </select>
+            </div>
+
+            <div class="filter-group filter-search">
+              <label for="filter-indicator" class="filter-label">Search Indicator</label>
+              <input
+                type="text"
+                id="filter-indicator"
+                class="filter-input"
+                placeholder="Search indicator description"
+              />
+            </div>
+          </div>
+
+          <!-- Loading / Error -->
+          <div id="status-message" class="status-message" role="status" aria-live="polite">
+            Loading dataset…
+          </div>
+
+          <!-- Dataset Table -->
+          <div class="table-wrapper" aria-label="Dataset table container">
+            <table id="dataset-table" class="data-table sortable">
+              <thead>
+                <tr>
+                  <th data-key="region">Region</th>
+                  <th data-key="sector">Sector</th>
+                  <th data-key="indicator">Indicator</th>
+                  <th data-key="value" class="numeric">Value</th>
+                </tr>
+              </thead>
+              <tbody id="dataset-tbody">
+                <!-- Rows injected by script.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transparency Note -->
+      <section class="section">
+        <div class="container">
+          <p class="transparency-note">
+            Note:
+            This is a simplified prototype dataset used for academic demonstration.
+            All machine learning predictions and budget optimization results are derived directly from these values.
+          </p>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="section section-cta">
+        <div class="container cta-inner">
+          <h2 class="cta-title">
+            Explore how this data is used to generate development priorities.
+          </h2>
+          <p class="cta-text">
+            Move from raw indicators to district-wise priority scores and budget-aware recommendations.
+          </p>
+          <div class="cta-actions">
+            <a href="/analyze" class="btn btn-primary">Analyze District</a>
+            <a href="/how-it-works" class="btn btn-outline">How the Model Works</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-main">
+          <div class="footer-title">
+            ML-Based District Development Prioritization System
+          </div>
+          <p class="footer-text">
+            Data-driven decision support system for academic and research use.
+          </p>
+        </div>
+        <div class="footer-meta">
+          <div class="footer-stack">
+            <span class="footer-label">Technologies:</span>
+            <span class="footer-chip">Python</span>
+            <span class="footer-chip">Machine Learning</span>
+            <span class="footer-chip">Random Forest</span>
+            <span class="footer-chip">Data Analytics</span>
+          </div>
+          <div class="footer-note">
+            Academic prototype. Not an official government decision-making tool.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="dataset.js"></script>
+</body>
+</html>
